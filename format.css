@@ -1,0 +1,92 @@
+body {
+	background-color: #CCC;
+}
+button {
+	font-family: "Lucida Console", "Courier New";
+	margin-right: 17px;
+	background-color: transparent; 
+	outline: none;
+	border: none;
+	text-align: center;
+}
+table {
+	position: absolute;
+	z-index: 1;
+	font-family: "Lucida Console", "Courier New", monospace;
+	color: #000000;
+	font-size: 14px;
+	padding: none;
+}
+.buttonClass {
+	font-size: 9px;
+	padding: none;
+}
+#boxoutline {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+#PlanetaryMotion {
+	position: absolute;
+	top: 40px;
+	left: 790px;
+}
+#GlobeMap {
+	position: absolute;
+	top: 41px;
+	left: 61.2px;
+}
+#EclipseProjection {
+	position: absolute;
+	top: 41px;
+	left: 61.2px;
+	z-index: 1;
+}
+.generalData {
+	width: 600px;
+	top: 540px;
+	left: 810px;		
+}
+.pastMoon {
+	width: 350px;
+	top: 539px;
+	left: 420px;
+}
+.pastEclipse {
+	width: 350px;
+	top: 539px;
+	left: 70px;
+}
+.slides {
+	width: 300px;
+	height: 30px;
+	position: absolute;
+	top: 186px;
+	left: 1245px;
+	z-index: 1;
+	transform: rotate(90deg);
+}
+.projectorslider {
+	width: 200px;
+	height: 25px;
+	position: absolute;
+	z-index: 1;
+	top: 512px;
+	left: 572px;
+}
+.title {
+	font-size: 17px;
+	padding-top: 9px;
+	padding-bottom: 6px;
+	text-decoration: underline;
+}
+.semititle {
+	font-size: 15px;
+	padding-top: 8px;
+	padding-bottom: 6px;
+	text-decoration: underline;
+}
+.width20 {
+	width: 20px;
+	text-align: center;
+}

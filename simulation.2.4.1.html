@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<canvas id="boxoutline" width=1450 height=760></canvas>
+		<canvas id="PlanetaryMotion" width=600 height=470></canvas>
+		<canvas id="GlobeMap" width=698 height=468></canvas>
+		<canvas id="EclipseProjection" width=698 height=468></canvas>
+		<link rel="stylesheet" href="format.css">	
+		<script src="display.js"></script>
+		<script src="processor.js"></script>
+	</head>
+	<body>
+		<div class="slides">
+			<button onclick="slider(1)">Solar System</button>
+			<button onclick="slider(2)">Earth - Moon</button>
+		</div>
+		<div class="projectorslider">
+			<button onclick="projectorslider(0)">2D View</button>
+			<button onclick="projectorslider(1)">3D View</button>
+		</div>
+		<table class="generalData">
+			<tr><td class="title" colspan="2">General Information:<td></tr>
+			<tr><td>Elapsed Time : </td><td><span id="time">N/A</span></td></tr>
+			<tr><td>Simulation Date: </td><td><span id="date">N/A</span></td></tr>
+			<tr><td>Last New Moon: </td><td><span id="logMoonN">waiting for new moon...</span></td></tr>
+			<tr><td>Last Full Moon: </td><td><span id="logMoonF">waiting for full moon...</span></td></tr>
+			<tr><td>Last Eclipse: </td><td><span id="logEclipse">waiting for eclipse...</span></td></tr>
+			<tr><td class="title" colspan="2">Display Setting:</td></tr>
+			<tr><td>Days per cycle: </td><td><span id="hpr">N/A</span></td></tr>
+			<tr><td>Scale: (Solar System) </td><td><span id="Scale">N/A</span>px / AU</td></tr>
+			<tr><td>Scale: (Moon - Earth) </td><td><span id="Render">N/A</span>px /AU</td></tr>
+		</table>
+		<span id="data1"></span>
+		<span id="testerr">N/A</span>
+		<table class="pastMoon">
+			<tr><td class="title" colspan="2">Past New / Full Moons:</td></tr>
+			<tr><td class="width20">-</td><td><span id="logMoon1"></span></td>
+			<tr><td class="width20">-</td><td><span id="logMoon2"></span></td>
+			<tr><td class="width20">-</td><td><span id="logMoon3"></span></td>
+			<tr><td class="width20">-</td><td><span id="logMoon4"></span></td>
+			<tr><td class="width20">-</td><td><span id="logMoon5"></span></td>
+			<tr><td class="width20">-</td><td><span id="logMoon6"></span></td>
+			<tr><td class="width20">-</td><td><span id="logMoon7"></span></td>
+			<tr><td class="width20">-</td><td><span id="logMoon8"></span></td>
+			<tr><td class="width20">-</td><td><span id="logMoon9"></span></td>
+			<tr><td class="width20">-</td><td><span id="logMoon10"></span></td>
+		</table>
+		<table class="pastEclipse">
+			<tr><td class="title" colspan="2">Past Eclipses:</td></tr>
+			<tr><td class="width20">-</td><td><span id="logEclipse1"></span></td><td><button class="buttonClass" onclick="interpretEclipsePath(0)">▢</button></td>
+			<tr><td class="width20">-</td><td><span id="logEclipse2"></span></td><td><button class="buttonClass" onclick="interpretEclipsePath(1)">▢</button></td>
+			<tr><td class="width20">-</td><td><span id="logEclipse3"></span></td><td><button class="buttonClass" onclick="interpretEclipsePath(2)">▢</button></td>
+			<tr><td class="width20">-</td><td><span id="logEclipse4"></span></td><td><button class="buttonClass" onclick="interpretEclipsePath(3)">▢</button></td>
+			<tr><td class="width20">-</td><td><span id="logEclipse5"></span></td><td><button class="buttonClass" onclick="interpretEclipsePath(4)">▢</button></td>
+			<tr><td class="width20">-</td><td><span id="logEclipse6"></span></td><td><button class="buttonClass" onclick="interpretEclipsePath(5)">▢</button></td>
+			<tr><td class="width20">-</td><td><span id="logEclipse7"></span></td><td><button class="buttonClass" onclick="interpretEclipsePath(6)">▢</button></td>
+			<tr><td class="width20">-</td><td><span id="logEclipse8"></span></td><td><button class="buttonClass" onclick="interpretEclipsePath(7)">▢</button></td>
+			<tr><td class="width20">-</td><td><span id="logEclipse9"></span></td><td><button class="buttonClass" onclick="interpretEclipsePath(8)">▢</button></td>
+			<tr><td class="width20">-</td><td><span id="logEclipse10"></span></td><td><button class="buttonClass" onclick="interpretEclipsePath(9)">▢</button></td>
+		</table>
+		<script>
+			boxoutline();
+			initialdata();
+			motion();
+			display();
+			Projection();
+		</script>
+	</body>
+</html>
